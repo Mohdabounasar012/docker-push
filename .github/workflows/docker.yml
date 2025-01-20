@@ -21,8 +21,8 @@ jobs:
 
       - name: Build the Docker image
         run: |
-          docker build  -t abou12345/php-mysql-combine:latest .
+          docker build  -t abou12345/docker-test-login-php-apache-combine:latest .
 
       - name: Push the Docker image to Docker Hub
         run: |
-          docker push abou12345/php-mysql-combine:latest .
+          docker push abou12345/docker-test-login-php-apache-combine:latest 
