@@ -24,8 +24,8 @@ jobs:
 
       - name: Build the Docker image
         run: |
-          docker build -t $DOCKER_IMAGE .  # Build the Docker image from the Dockerfile in the repository
+          docker build -t abou12345/php-mysql-combine:latest .  # Build the Docker image from the Dockerfile in the repository
 
       - name: Push the Docker image to Docker Hub
         run: |
-          docker push $DOCKER_IMAGE  # Push the built Docker image to Docker Hub
+          docker push abou12345/php-mysql-combine:latest  # Push the built Docker image to Docker Hub
