@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  php-apache:
+    build: .
+    ports:
+      - "8084:80"
+    volumes:
+      - ./PHP-MySQL-Login-System:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: registered
+      MYSQL_USER: abou-user
+      MYSQL_PASSWORD: Abou@123456
+    ports:
+      - "3304:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:
